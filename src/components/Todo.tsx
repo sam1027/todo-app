@@ -12,12 +12,14 @@ function Todo({text, category, id}: ITodo) {
         });
     };
 
+
     return (
         <li>
             <span>{text}</span>
             {category !== Categories.TODO && <button name={Categories.TODO} onClick={onClick}>{Categories.TODO}</button>}
             {category !== Categories.DOING && <button name={Categories.DOING} onClick={onClick}>{Categories.DOING}</button>}
             {category !== Categories.DONE && <button name={Categories.DONE} onClick={onClick}>{Categories.DONE}</button>}
+            <button name={Categories.DELETE} onClick={onClick}>{Categories.DELETE}</button>
         </li>
     );
 }
